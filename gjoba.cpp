@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     int shpejtesia, denimi;
-    char valuta='\20AC';
+    char valuta='\x24';
     cout<<"Sa eshte shpejtesia e levizjes: ";
     cin>>shpejtesia;
     if(shpejtesia<=30)

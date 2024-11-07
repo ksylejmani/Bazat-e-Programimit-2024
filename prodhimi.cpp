@@ -7,12 +7,12 @@ int main(){
     p=1;
     i=1;
     do{
-        if(i!=3)
+        if(i!=2 && i!=3)
             p=p*(a*i+b);
         i=i+1;
-    }while(i<=n+1);
+    }
+    while(i<=n+1);
     y=a+p;
     cout<<"y="<<y<<endl;
-
     return 0;
 }

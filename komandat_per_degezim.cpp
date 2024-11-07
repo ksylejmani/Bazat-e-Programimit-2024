@@ -16,10 +16,7 @@ int main(){
     else
         c=0;
     std::cout<<"Vlera c= "
-        <<std::setw(10)
-        <<std::setfill('#')
-        <<std::left
-        <<c
-        <<"\n";
+        <<std::setw(10) <<std::setfill('#') <<std::left <<c
+        <<std::endl;
     return 0;
 }

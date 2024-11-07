@@ -19,4 +19,5 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<setw(3)<<vargu[i];
     }
+    return 0;
 }
