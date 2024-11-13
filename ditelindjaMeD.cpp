@@ -6,9 +6,10 @@ int main(){
     cin>>dita_sot;
     cout<<"Cila eshte dita e lindjes suaj: ";
     cin>>ditelindja;
-    if(ditelindja<dita_sot)
-        cout<<"Ditelindja e juaj ka qene para "
-            <<dita_sot-ditelindja<<" dite."<<endl;
+    if(ditelindja<dita_sot){
+        cout<<"Ditelindja e juaj ka qene para ";
+        cout<<dita_sot-ditelindja<<" dite."<<endl;
+    }
     else if(ditelindja==dita_sot)
         cout<<"Urime! Sot e keni ditelindjen."<<endl;
     else
