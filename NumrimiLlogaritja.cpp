@@ -2,7 +2,7 @@
 #include<math.h>
 using namespace std;
 enum llogaritja{
-    gjetja=1, mesatarja, diferenca
+    gjetja=1, mesatarja, diferenca, shuma_brenda_diapazonit
 };
 double llogarit(int vargu[], int m, int x, llogaritja llog){
     double rez;
@@ -33,6 +33,19 @@ double llogarit(int vargu[], int m, int x, llogaritja llog){
         rez=abs(vargu[0]-vargu[m-1]);
         break;
     }
+    case shuma_brenda_diapazonit:
+    {
+        rez=0;
+        int n1,n2;
+        cout<<"Jepni dy vlera per diapazonin: ";
+        cin>>n1>>n2;
+        for(int i=0;i<m;i++){
+            if(vargu[i]>n1 && vargu[i]<n2){
+                rez=rez+vargu[i];
+            }
+        }
+        break;
+    }
     default:
     {
         cout<<"Nuk eshte caktuar nje veprim valid per llogaritje\n";
@@ -44,7 +57,8 @@ double llogarit(int vargu[], int m, int x, llogaritja llog){
 }
 int main(){
     int intLl;
-    cout<<"Zgjedhni llojin e llogaritje (1-gjetje, 2-mestare, 3-diference);";
+    cout<<"Zgjedhni llojin e llogaritje (1-gjetje, 2-mestare, 3-diference, ;";
+    cout<<" 4-shuma brenda diapazonit): ";
     cin>>intLl;
     llogaritja ll=static_cast<llogaritja>(intLl);
     int vlera=0;
@@ -63,8 +77,12 @@ int main(){
         mesazhi="Mesatarja: ";
         cout<<mesazhi<<llogarit(vargu,m,vlera,ll)<<endl;
     }
-    else{
+    else if(ll==diferenca){
         mesazhi="Diferenca absolute ne mes te anetarit te pare dhe te fundit: ";
+        cout<<mesazhi<<llogarit(vargu,m,vlera,ll)<<endl;
+    }
+    else{
+        mesazhi="Shuma e anetareve brenda diapazonit: ";
         cout<<mesazhi<<llogarit(vargu,m,vlera,ll)<<endl;
     }
     return 0;
